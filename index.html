@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pukul Tikus Tanah</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <h1><span class="judul">Game</span> Pukul Tikus Tanah</h1> 
+
+  <div class="container-bawah-h1">
+    <button type="button" onclick="pilihKarakter()">Pilih Karakter</button><br>
+    <button type="button" class="mulai" onclick="mulai()">Mulai !</button>
+
+    <div class="desain-papan">
+      <h2 color="blue">Skor</h2>
+      <h2 class="papan-skor">0</h2>
+    </div>
+  </div>
+
+  <h1 class="lv">LEVEL <span id="level">1</span></h1>
+
+  <div class="container">
+    <div class="tanah">
+      <div class="tikus"></div>
+    </div>
+    <div class="tanah">
+      <div class="tikus"></div>
+    </div>
+    <div class="tanah">
+      <div class="tikus"></div>
+    </div>
+    <div class="tanah">
+      <div class="tikus"></div>
+    </div>
+    <div class="tanah">
+      <div class="tikus"></div>
+    </div>
+    <div class="tanah">
+      <div class="tikus"></div>
+    </div>
+  </div>
+
+  <div id="waktu"></div>
+  <audio src="audio/Pop.mp3" id="pop"></audio>
+  <audio id="notifikasiAudio" src="audio/notifikasi.mpeg"></audio>
+  <audio src="audio/backsound.mp3" id="background-audio" loop></audio>
+  <script src="js/script.js"></script>
+
+  <button class="fitur" onclick="tampilkanDeskripsi()">Panduan</button>
+
+</body>
+</html>

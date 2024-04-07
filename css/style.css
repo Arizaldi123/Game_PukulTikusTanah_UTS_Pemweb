@@ -1,0 +1,285 @@
+body {
+  background-image: url('../img/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body.level-1 {
+  background-image: url('../img/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body.level-2 {
+  background-image: url('../img/background2.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body.level-3 {
+  background-image: url('../img/background3.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+h1 {
+  font-size: 40px;
+  text-align: center;
+  font-family: 'Arial Black', sans-serif; 
+  margin: 8px;
+  color: black;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h1 > span.judul {
+  color: yellow;
+}
+
+h2 {
+  font-size: 28;
+  text-align: center;
+  font-family: 'Arial Black', sans-serif; 
+  margin: 8px;
+  color: #000000;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+button {
+  padding: 10px 20px;
+  margin: auto;
+  cursor: pointer;
+  border: 2px solid #006eff;
+  border-radius: 5px;
+  background-color: #006eff;
+  color: #fff;
+  display: block;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  transition-duration: 0.4s;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+button:hover {
+  background-color: rgb(233, 230, 230); 
+  border-radius: 5px;
+  color: black;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  text-shadow: none;
+}
+
+.fitur {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 15px 30px;
+  cursor: pointer;
+  border: none;
+  border-radius: 30px;
+  background-image: linear-gradient(to right, #FFC837, #FFA900);
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.fitur:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+
+.mulai {
+  margin-left: 50px;  
+  padding: 10px 30px;
+  align-items: center;
+}
+
+.container-bawah-h1 {
+  margin-top: 40px;
+}
+
+.desain-papan {
+  background-color: yellow; 
+  padding: 5px; 
+  border-radius: 20px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-left: 50px;
+}
+
+.desain-papan,
+.mulai,
+.container-bawah-h1 {
+  display: flex;
+}
+
+.container {
+  width: 600px;
+  margin: auto;
+  cursor: url(../img/palu1.png/), auto;
+}
+
+.container:active {
+  cursor: url(../img/palu2.png), auto;
+}
+
+.tanah {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  float: left;
+}
+
+.tanah::after {
+  content: '';
+  display: block;
+  width: 200px;
+  height: 100px;
+  background: url(../img/tanah.png) bottom center no-repeat;
+  background-size: 80%;
+  position: absolute;
+  bottom: -25px;
+}
+
+.tikus {
+  width: 100%;
+  height: 100%;
+  background: url(../img/tikus.png) bottom center no-repeat;
+  background-size: 60%;
+  position: absolute;
+  top: 100px;
+  transition: top 0.3s;
+}
+
+.tanah.muncul .tikus {
+  top: -15px;
+}
+
+.dialog {
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url(../img/bgdialog.png);
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 50%;
+  height: 30%;
+  max-width: 400px;
+  max-height: 400px;
+  overflow: auto;
+}
+
+.dialog img {
+  margin: 10px;
+  cursor: pointer;
+  width: 100px;
+  height: auto;
+  padding-top: 10px;
+  background-color: rgba(139, 69, 19, 0.5); 
+  border: 3px solid black; 
+  border-radius: 8px; 
+}
+
+
+.game-over-notification {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 2px solid red;
+    border-radius: 10px;
+    width: 50%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.game-over-content {
+    color: red;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between; 
+  margin-top: 10px; 
+}
+
+.notification-card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border: 2px solid #4caf50;
+  border-radius: 10px;
+  width: 300px;
+  max-width: 80%;
+  text-align: center;
+  z-index: 9999;
+}
+
+#level {
+  font-size: 20px; 
+}
+
+.lv {
+  font-size: 20px; 
+}
+
+.notifikasi {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border: 2px solid #4caf50;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 80%;
+  text-align: left;
+  z-index: 9999;
+}
+
+.notifikasi button {
+  padding: 10px 20px;
+  margin-top: 15px;
+  cursor: pointer;
+  border: 2px solid #4caf50;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: #fff;
+  font-weight: bold;
+  transition-duration: 0.4s;
+}
+
+.notifikasi button:hover {
+  background-color: rgb(204, 202, 202);
+  color: black;
+}
+
